@@ -24,15 +24,15 @@ app.post("/send-email", (req, res) => {
     port: 587, // Use 465 for SSL
     secure: false, // true for 465, false for 587
     auth: {
-      user: "jawad.dheini@icloud.com",
-      pass: "qvfu-owsb-xuxn-lbwu",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: "jawad.dheini@icloud.com", // Must be your iCloud email
+    from: process.env.EMAIL_USER, // Must be your iCloud email
     replyTo: email, // User's email for reply
-    to: "jawad.dheini@icloud.com",
+    to: process.env.EMAIL_USER,
     subject: `Contact form submission from ${name}`,
     text: message,
   };

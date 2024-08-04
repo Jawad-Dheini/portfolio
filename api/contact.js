@@ -6,15 +6,16 @@ module.exports = async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "icloud",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: process.env.EMAIL,
-    to: process.env.EMAIL,
-    subject: `Contact from ${name}`,
+    from: process.env.EMAIL_USER,
+    replyTo: email,
+    to: process.env.EMAIL_USER,
+    subject: `Contact form submission from ${name}`,
     text: `You have a new message from ${name} (${email}):\n\n${message}`,
   };
 
