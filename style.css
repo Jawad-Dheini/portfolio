@@ -12,6 +12,8 @@ html {
 body {
   background: #1f242d;
   color: #fff;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .header {
@@ -256,7 +258,7 @@ body {
 }
 
 .skill-group {
-  background-color: #f9f9f9; /* Light gray or close to white */
+  background-color: #f9f9f9;
   border-radius: 30px;
   padding: 10px;
   margin-bottom: 30px;
@@ -294,4 +296,68 @@ body {
   display: block;
   margin-top: 5px;
   font-size: 1em;
+}
+
+/* Project List Styles */
+.projects-content {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project-list {
+  display: grid;
+  gap: 20px;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 600px) {
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 600px) {
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 2300px) {
+  .project-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Project Item Styles */
+.project-item {
+  background: #2a2d38;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
 }
