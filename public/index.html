@@ -26,6 +26,18 @@
         <a href="#projects" style="--i: 4">Projects</a>
         <a href="#contact" style="--i: 5">Contact</a>
       </nav>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="mobile-navbar" id="mobile-navbar">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
     </header>
 
     <section class="home" id="home">
@@ -418,6 +430,30 @@
             link.classList.add("active");
           }
         });
+      });
+
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const mobileNavbar = document.getElementById("mobile-navbar");
+
+      // Toggle mobile menu visibility
+      hamburgerMenu.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent click event from propagating to document
+        mobileNavbar.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (event) => {
+        if (
+          !mobileNavbar.contains(event.target) &&
+          !hamburgerMenu.contains(event.target)
+        ) {
+          mobileNavbar.classList.remove("active");
+        }
+      });
+
+      // Prevent the menu from closing when clicking inside the menu
+      mobileNavbar.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent click event from propagating to document
       });
     </script>
   </body>

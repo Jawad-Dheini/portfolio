@@ -1,1 +1,14 @@
 .vercel
+node_modules
+.env
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+package-lock.json
+yarn.lock
+*.tmp
+.vercel/
