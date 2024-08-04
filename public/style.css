@@ -301,6 +301,13 @@ body {
     font-size: 0.875rem;
     display: inline-block;
   }
+
+  .social-media svg {
+    width: 10px;
+    height: 10px;
+    font-size: 0.875rem;
+    display: inline-block;
+  }
 }
 @media (max-width: 600px) {
   .home-content h1 {
