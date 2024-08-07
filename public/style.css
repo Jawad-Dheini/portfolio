@@ -430,6 +430,13 @@ body {
   color: #fff;
 }
 
+@media screen and (max-width: 450px), screen and (max-height: 750px) {
+  .about {
+    margin-top: 110px;
+    border: red;
+  }
+}
+
 .about-content {
   max-width: 800px;
   margin: 0 auto;
