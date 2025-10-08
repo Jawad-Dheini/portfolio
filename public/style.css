@@ -648,3 +648,54 @@ body {
     flex-basis: 100%;
   }
 }
+
+.projects-note{
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #cfd5df;
+}
+
+.projects-content .projects-note{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.note-text{
+  font-size: 0.95rem;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+.chip{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  line-height: 1;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.chip-warning{
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.10);
+  border-color: rgba(251, 191, 36, 0.9);
+}
+
+.chip-warning:hover{
+  box-shadow: 0 0 18px rgba(251,191,36,0.25);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .chip-warning:hover{ box-shadow: none; }
+}
+
+@media (max-width: 600px){
+  .note-text{ font-size: 0.9rem; }
+  .chip{ font-size: 0.7rem; padding: 5px 9px; }
+}
