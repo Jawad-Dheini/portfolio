@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deafeat | Jawad Dheini</title>
+    <meta
+      name="description"
+      content="Deafeat: a hardware device and machine learning model translating sign language to speech and back, founded and led by Jawad Dheini."
+    />
+    <meta property="og:title" content="Deafeat | Jawad Dheini" />
+    <meta
+      property="og:description"
+      content="A hardware device and machine learning model translating sign language to speech and back."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/#home" class="logo"
+        ><span class="logo-user">jawad@portfolio</span
+        ><span class="logo-path">:~/projects/deafeat$</span></a
+      >
+      <nav class="navbar">
+        <a href="/#home">$ ./home</a>
+        <a href="/#about">$ ./about</a>
+        <a href="/#skills">$ ./skills</a>
+        <a href="/#projects" class="active">$ ./projects</a>
+        <a href="/#awards">$ ./awards</a>
+        <a href="/#contact">$ ./contact</a>
+      </nav>
+      <div
+        class="hamburger-menu"
+        id="hamburger-menu"
+        role="button"
+        tabindex="0"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="mobile-navbar" id="mobile-navbar">
+        <div class="mobile-navbar-title"><span></span>nav.sh</div>
+        <a href="/#home" class="mobile-nav-link">$ ./home</a>
+        <a href="/#about" class="mobile-nav-link">$ ./about</a>
+        <a href="/#skills" class="mobile-nav-link">$ ./skills</a>
+        <a href="/#projects" class="mobile-nav-link">$ ./projects</a>
+        <a href="/#awards" class="mobile-nav-link">$ ./awards</a>
+        <a href="/#contact" class="mobile-nav-link">$ ./contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-page">
+        <div class="project-container">
+          <a href="/#projects" class="breadcrumb">&lt; back to ./projects</a>
+          <p class="project-eyebrow">$ cd ~/projects/deafeat</p>
+          <h1 class="project-title">Deafeat</h1>
+          <p class="project-tagline">
+            A hardware device and a trained machine learning model that
+            translate sign language into text and speech, and back, for
+            two-way communication between deaf and hearing users.
+          </p>
+          <div class="project-meta-row">
+            <span class="project-tag project-tag-status">Active</span>
+            <span class="project-tag">Founder &amp; Technical Lead</span>
+            <span class="project-tag">Jul 2023 &ndash; Present</span>
+            <span class="project-tag">Team of 6</span>
+          </div>
+
+          <div class="project-links">
+            <a
+              class="project-link-btn"
+              href="https://nuvux.nuvustudio.com/news/project-highlight-international-college-school-lebanon"
+              target="_blank"
+              rel="noopener"
+              >NuVuX Article &#8599;</a
+            >
+            <a
+              class="project-link-btn"
+              href="https://youtu.be/4bGaQb2MfcU"
+              target="_blank"
+              rel="noopener"
+              >Presentation Video &#8599;</a
+            >
+            <a
+              class="project-link-btn"
+              href="https://www.instagram.com/deafeatuniversal"
+              target="_blank"
+              rel="noopener"
+              >Instagram &#8599;</a
+            >
+          </div>
+
+          <div class="project-media">
+            <img
+              src="/assets/deafeat/deafeat-device.jpg"
+              alt="The Deafeat AI device: a camera and sensor module next to a progress-update slide"
+            />
+            <p class="project-media-caption">
+              The Deafeat AI hardware during a progress-update review, from
+              the NuVuX project feature.
+            </p>
+          </div>
+
+          <div class="project-gallery">
+            <img
+              src="/assets/deafeat/deafeat-hardware-detail.jpg"
+              alt="Close-up of the Deafeat device's internal hardware and wiring"
+            />
+          </div>
+
+          <div class="project-body">
+            <div class="project-section">
+              <h2>Overview</h2>
+              <p>
+                Deafeat AI is a system that detects hand gestures and
+                translates them into letters and words, which are then
+                combined into sentences and, finally, speech. It also works
+                in reverse, translating spoken language into text, for
+                two-way communication between deaf and hearing people.
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>My Role</h2>
+              <p>
+                I founded the project and lead a six-person team. I work on
+                the machine learning model, the training pipeline, and the
+                hardware integration alongside one other engineer, in
+                addition to the technical direction and team leadership.
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>How It Works</h2>
+              <ul>
+                <li>
+                  Camera integration with frame-rate optimization, and
+                  library experimentation to handle inconsistent lighting
+                </li>
+                <li>
+                  A static sign-recognition model integrated with a dynamic
+                  gesture model in a unified inference pipeline
+                </li>
+                <li>
+                  Temporal logic for tracking gestures over time, plus
+                  geometric preprocessing to improve detection accuracy
+                </li>
+                <li>
+                  A lightweight custom-training menu with automatic data
+                  augmentation, to work around a limited training dataset
+                </li>
+                <li>
+                  Deployed on a Raspberry Pi, within its limited processing
+                  power
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-section">
+              <h2>Testing</h2>
+              <p>
+                Deafeat has been tested at the Lebanese School for the Blind
+                and the Deaf (LSBD) in Baabda, Lebanon.
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>Status &amp; Recognition</h2>
+              <p>
+                The project is copyright registered with the Lebanese
+                Ministry of Economy, and a USPTO patent application is in
+                preparation. Deafeat has been recognized by NuVuX, a
+                US-based innovation studio affiliated with MIT, and its
+                Instagram community has grown to over 3,000 followers, most
+                of whom are Deaf. The team also received a Social
+                Entrepreneurship award for Deafeat as their Ali Ghandour
+                Center (AGC) graduation deliverable at International
+                College.
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>What's Next</h2>
+              <p>
+                Planned directions include a standalone mobile app, hardware
+                redesigns, and support for additional sign languages.
+              </p>
+            </div>
+
+            <div class="project-section">
+              <p class="project-note">
+                Technical details, the testing location, the award context,
+                and the linked video/Instagram above are drawn from the
+                NuVuX article "Project Highlight: International College
+                School Lebanon" (August 6, 2025), written by Jawad on behalf
+                of the Deafeat team.
+              </p>
+            </div>
+          </div>
+
+          <nav class="project-pagination">
+            <a class="prev-link" href="/projects/early-apps/"
+              ><span class="dir">&lt; previous</span>Early Android Apps</a
+            >
+            <a class="next-link" href="/projects/findvolunteering/"
+              ><span class="dir">next &gt;</span>FindVolunteering</a
+            >
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-prompt"
+          >jawad@portfolio:~$
+          <span class="cmd">echo "thanks for stopping by"</span></span
+        >
+        <div class="footer-links">
+          <a href="/jawad-dheini-resume.pdf" download>Resume</a>
+          <a href="https://github.com/Jawad-Dheini" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jawad-dheini/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+        <span class="footer-copy"
+          >&copy; <span id="footer-year"></span> Jawad Dheini</span
+        >
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

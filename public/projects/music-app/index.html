@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Artist Search | Jawad Dheini</title>
+    <meta
+      name="description"
+      content="A React app for searching Spotify artists and browsing their albums, built by Jawad Dheini for a technical interview assessment."
+    />
+    <meta
+      property="og:title"
+      content="Spotify Artist Search | Jawad Dheini"
+    />
+    <meta
+      property="og:description"
+      content="React app for searching Spotify artists and browsing their albums."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/#home" class="logo"
+        ><span class="logo-user">jawad@portfolio</span
+        ><span class="logo-path">:~/projects/music-app$</span></a
+      >
+      <nav class="navbar">
+        <a href="/#home">$ ./home</a>
+        <a href="/#about">$ ./about</a>
+        <a href="/#skills">$ ./skills</a>
+        <a href="/#projects" class="active">$ ./projects</a>
+        <a href="/#awards">$ ./awards</a>
+        <a href="/#contact">$ ./contact</a>
+      </nav>
+      <div
+        class="hamburger-menu"
+        id="hamburger-menu"
+        role="button"
+        tabindex="0"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="mobile-navbar" id="mobile-navbar">
+        <div class="mobile-navbar-title"><span></span>nav.sh</div>
+        <a href="/#home" class="mobile-nav-link">$ ./home</a>
+        <a href="/#about" class="mobile-nav-link">$ ./about</a>
+        <a href="/#skills" class="mobile-nav-link">$ ./skills</a>
+        <a href="/#projects" class="mobile-nav-link">$ ./projects</a>
+        <a href="/#awards" class="mobile-nav-link">$ ./awards</a>
+        <a href="/#contact" class="mobile-nav-link">$ ./contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-page">
+        <div class="project-container">
+          <a href="/#projects" class="breadcrumb">&lt; back to ./projects</a>
+          <p class="project-eyebrow">$ cd ~/projects/music-app</p>
+          <h1 class="project-title">Spotify Artist Search</h1>
+          <p class="project-tagline">
+            A React app for searching Spotify artists and browsing their
+            albums, built as part of a technical interview assessment.
+          </p>
+          <div class="project-meta-row">
+            <span class="project-tag">Personal project</span>
+            <span class="project-tag">React</span>
+          </div>
+
+          <div class="project-links">
+            <a
+              class="project-link-btn"
+              href="https://github.com/Jawad-Dheini/music-app"
+              target="_blank"
+              rel="noopener"
+              >GitHub &#8599;</a
+            >
+          </div>
+
+          <div class="project-body">
+            <div class="project-section">
+              <h2>Overview</h2>
+              <p>
+                A React app that connects to Spotify using the Implicit
+                Grant authentication flow, then lets a user search for
+                artists and view their albums and related information. It
+                was built as part of the technical assessment for the ITXI
+                internship application.
+              </p>
+            </div>
+
+            <div class="project-section">
+              <h2>Technology</h2>
+              <ul>
+                <li>React</li>
+                <li>Spotify Web API (Implicit Grant flow)</li>
+              </ul>
+            </div>
+          </div>
+
+          <nav class="project-pagination">
+            <a class="prev-link" href="/projects/min-max-rv-explorer/"
+              ><span class="dir">&lt; previous</span>Min/Max Distribution
+              Explorer</a
+            >
+            <a class="next-link" href="/projects/early-apps/"
+              ><span class="dir">next &gt;</span>Early Android Apps</a
+            >
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-prompt"
+          >jawad@portfolio:~$
+          <span class="cmd">echo "thanks for stopping by"</span></span
+        >
+        <div class="footer-links">
+          <a href="/jawad-dheini-resume.pdf" download>Resume</a>
+          <a href="https://github.com/Jawad-Dheini" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jawad-dheini/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+        <span class="footer-copy"
+          >&copy; <span id="footer-year"></span> Jawad Dheini</span
+        >
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>
