@@ -19,19 +19,27 @@
       theme: "dark",
       callback: function (token) {
         currentToken = token;
+        console.log("Turnstile: token obtained, length", token ? token.length : 0);
       },
-      "error-callback": function () {
+      "error-callback": function (errorCode) {
         currentToken = null;
+        console.error("Turnstile error-callback, error code:", errorCode);
         setStatus(
           "> verification widget failed to load, please refresh",
           "error"
         );
+        // Returning a falsy value (or nothing) here is intentional: it
+        // leaves Cloudflare's own default console diagnostics for this
+        // error code intact instead of suppressing them. Do not return
+        // true from this callback while debugging.
       },
       "expired-callback": function () {
         currentToken = null;
+        console.warn("Turnstile: token expired");
       },
       "timeout-callback": function () {
         currentToken = null;
+        console.warn("Turnstile: challenge timed out");
       },
     });
   };
@@ -89,11 +97,16 @@
       .then(function (res) {
         return res
           .json()
-          .catch(function () {
+          .catch(function (parseErr) {
+            console.error(
+              "Contact form: response was not valid JSON, status",
+              res.status,
+              parseErr
+            );
             return {};
           })
           .then(function (body) {
-            return { ok: res.ok, body: body };
+            return { ok: res.ok, status: res.status, body: body };
           });
       })
       .then(function (result) {
@@ -104,6 +117,12 @@
           );
           form.reset();
         } else {
+          console.error(
+            "Contact form submission failed, HTTP status",
+            result.status,
+            "response body:",
+            result.body
+          );
           setStatus(
             "> " +
               ((result.body && result.body.message) ||
@@ -112,7 +131,8 @@
           );
         }
       })
-      .catch(function () {
+      .catch(function (err) {
+        console.error("Contact form: network/fetch error", err);
         setStatus("> network error, please try again", "error");
       })
       .finally(function () {
