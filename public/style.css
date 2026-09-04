@@ -541,6 +541,38 @@ h2 {
 }
 
 /* ==========================================================================
+   Now
+   ========================================================================== */
+.now {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.now-content {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.now-term {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.now-line {
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.now-line:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
    About
    ========================================================================== */
 .about-content {

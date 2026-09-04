@@ -22,23 +22,23 @@
     if (!greet || !name || !rolePrefix || !role || !T) return;
 
     var ROLES = [
-      "Computer Science & Engineering Student",
-      "Fullstack Developer",
-      "Machine Learning Builder",
-      "Founder, Deafeat",
+      "algorithms and complexity",
+      "quantum computation",
+      "quantum error correction",
+      "the mathematical foundations of computing",
     ];
 
     if (T.reduceMotion) {
-      greet.textContent = "Hello, It's Me";
+      greet.textContent = "$ whoami";
       name.textContent = "Jawad Dheini";
-      rolePrefix.textContent = "I'm a ";
+      rolePrefix.textContent = "focused on ";
       role.textContent = ROLES[0];
       document.body.classList.add("hero-ready");
       return;
     }
 
     greet.classList.add("caret-active");
-    await T.typeInto(greet, "Hello, It's Me", { speed: 34, jitter: 30 });
+    await T.typeInto(greet, "$ whoami", { speed: 34, jitter: 30 });
     greet.classList.remove("caret-active");
 
     await T.wait(150);
@@ -48,7 +48,7 @@
 
     await T.wait(150);
     roleLine.classList.add("caret-active");
-    await T.typeInto(rolePrefix, "I'm a ", {
+    await T.typeInto(rolePrefix, "focused on ", {
       speed: 30,
       jitter: 26,
     });
@@ -71,7 +71,7 @@
     }
 
     document
-      .querySelectorAll(".navbar a, .mobile-nav-link")
+      .querySelectorAll(".navbar a, .mobile-nav-link, .social-contact-link")
       .forEach(function (anchor) {
         anchor.addEventListener("click", function (e) {
           var href = anchor.getAttribute("href");
